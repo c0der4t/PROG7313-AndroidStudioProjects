@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            //random change
 
             if (found == false){
                 Toast.makeText(this,"RUNNNNNNNNN....",Toast.LENGTH_LONG).show()
