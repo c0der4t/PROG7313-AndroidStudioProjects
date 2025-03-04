@@ -12,9 +12,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import java.util.concurrent.Executors
 
 class welcome : AppCompatActivity() {
+
+    lateinit var userAdapter : UserAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -89,6 +94,29 @@ class welcome : AppCompatActivity() {
 
             }
         }
+
+        val feed : RecyclerView = findViewById(R.id.welcome_RecycleView)
+
+        userAdapter = UserAdapter()
+
+        feed.apply {
+            layoutManager = LinearLayoutManager(this@welcome)
+            adapter = userAdapter
+        }
+
+        val items = mutableListOf<User>()
+        for (i in 0..40){
+            items.add(
+                User(
+                    Name="Name test $i",
+                    Password = "Password$1",
+                    imageURL = "https://picsum.photos/200/300"
+                )
+            )
+        }
+
+        userAdapter.submitList(items)
+
 
     }
 }
