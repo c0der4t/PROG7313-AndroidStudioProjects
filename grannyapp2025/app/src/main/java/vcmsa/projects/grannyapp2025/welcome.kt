@@ -14,6 +14,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
+import java.net.URL
 import java.util.concurrent.Executors
 
 class welcome : AppCompatActivity() {
@@ -104,19 +106,30 @@ class welcome : AppCompatActivity() {
             adapter = userAdapter
         }
 
-        val items = mutableListOf<User>()
-        for (i in 0..40){
-            items.add(
-                User(
-                    Name="Name test $i",
-                    Password = "Password$1",
-                    imageURL = "https://picsum.photos/200/300"
-                )
-            )
+//        val items = mutableListOf<User>()
+//        for (i in 0..40){
+//            items.add(
+//                User(
+//                    Name="Name test $i",
+//                    Password = "Password$1",
+//                    imageURL = "https://picsum.photos/200/300"
+//                )
+//            )
+//        }
+//
+//        userAdapter.submitList(items)
+
+       val executor2 = Executors.newSingleThreadExecutor()
+
+        executor2.execute {
+            //fetch data from external API into list of objects
+            val url = URL("https://prog7313.azurewebsites.net/?userdb")
+            val json = url.readText()
+            Log.d("monte",json.toString())
+            val userList = Gson().fromJson(json, Array<User>::class.java).toList()
+            Handler(Looper.getMainLooper()).post {
+                userAdapter.submitList(userList)
+            }
         }
-
-        userAdapter.submitList(items)
-
-
     }
 }
