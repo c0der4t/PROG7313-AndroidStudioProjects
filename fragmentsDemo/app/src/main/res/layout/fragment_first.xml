@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd45C"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="96sp"
+        android:textColor="#ff007f"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Duck Fragment" />
+</FrameLayout>
+
+<!--This is like a screen / form.
+ We can embed this into another form or we can
+ use the menu setup under res > menu > menu.xml
+ to add a little navbar at the bottom
+ -->
