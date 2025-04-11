@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItem_Wash"
+        android:icon="@drawable/ic_action_name"
+        android:title="Wash" />
+    <item
+        android:id="@+id/menuitem_GIveTrinket"
+        android:icon="@drawable/ic_trinket"
+        android:title="Give Trinket" />
+    <item
+        android:id="@+id/menuItem_EmptyPouch"
+        android:icon="@drawable/ic_empty"
+        android:title="Empty Pouch" />
+    <item
+        android:id="@+id/menuItem_Sleep"
+        android:icon="@drawable/ic_sleep"
+        android:title="Sleep" />
+</menu>
