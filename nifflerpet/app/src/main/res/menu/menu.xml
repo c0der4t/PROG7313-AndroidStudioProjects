@@ -4,8 +4,9 @@
 
     <item
         android:id="@+id/menuItem_Wash"
-        android:icon="@drawable/ic_action_name"
-        android:title="Wash" />
+        android:checked="false"
+        android:icon="@drawable/ic_brush"
+        android:title="Brush" />
     <item
         android:id="@+id/menuitem_GIveTrinket"
         android:icon="@drawable/ic_trinket"

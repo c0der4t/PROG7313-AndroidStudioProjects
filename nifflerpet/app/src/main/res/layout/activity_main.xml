@@ -7,33 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        android:id="@+id/prgbarHappiness"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="347dp"
-        android:layout_height="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/prgbarPouch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/prgbarPouch"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="345dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="411dp"
-        android:layout_height="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -44,5 +27,43 @@
         app:layout_constraintStart_toStartOf="parent">
 
     </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="192dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Health"
+            android:textSize="30dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbarHealth"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleY="4"
+            android:fadingEdge="horizontal"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Happiness"
+            android:textSize="30dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbarHappiness"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleY="4"
+            android:fadingEdge="horizontal"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
