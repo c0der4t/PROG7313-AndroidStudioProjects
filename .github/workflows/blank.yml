@@ -50,7 +50,7 @@ jobs:
       # Run Build Project
       - name: Build gradle project
         working-directory: ./mygithub
-        run: pwd
+        run: ls
         #run: ./gradlew build
 
       # Create APK Debug
