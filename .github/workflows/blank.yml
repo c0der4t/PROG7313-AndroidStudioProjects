@@ -50,8 +50,8 @@ jobs:
       # Run Build Project
       - name: Build gradle project
         working-directory: ./mygithub
-        run: ls
-        #run: ./gradlew build
+        #run: ls
+        run: ./gradlew build
 
       # Create APK Debug
       - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
