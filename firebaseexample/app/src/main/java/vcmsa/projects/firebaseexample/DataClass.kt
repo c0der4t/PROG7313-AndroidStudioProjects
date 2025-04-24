@@ -2,8 +2,8 @@ package vcmsa.projects.firebaseexample
 
 data class DataClass (
 
-    val name : String,
-    val description : String,
-    val id : Int,
-    val price : Int
+    val name : String = "",
+    val description : String = "",
+    val id : Int = 0,
+    val price : Int = 0
 )

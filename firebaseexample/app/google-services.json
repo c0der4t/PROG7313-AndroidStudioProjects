@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "66744539257",
+    "firebase_url": "https://bcad2025-634bf-default-rtdb.firebaseio.com",
     "project_id": "bcad2025-634bf",
     "storage_bucket": "bcad2025-634bf.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:66744539257:android:6b4dcb7896085a16051ca8",
+        "mobilesdk_app_id": "1:66744539257:android:751b1a0d8b3bb7d4051ca8",
         "android_client_info": {
           "package_name": "vcmsa.projects.firebaseexample"
         }
