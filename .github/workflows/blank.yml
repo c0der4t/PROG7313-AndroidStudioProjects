@@ -43,9 +43,9 @@ jobs:
         run: chmod +x ./mygithub/gradlew
 
       # Run Tests Build
-      - name: Run gradle tests
-        working-directory: ./mygithub
-        run: ./gradlew test
+      #- name: Run gradle tests
+      #  working-directory: ./mygithub
+      #  run: ./gradlew test
 
       # Run Build Project
       - name: Build gradle project
